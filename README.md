@@ -7,6 +7,8 @@ Name: Qinjun(Helen) Sui
 
 Updated: 03/11/2022
 
+[Github Link](https://github.com/qinjunsui/react-sequential-image-loader)
+
 ## Components
 props
 | props | signature | required | default value | description |
