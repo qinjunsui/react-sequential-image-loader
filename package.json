@@ -1,6 +1,6 @@
 {
   "name": "react-sequential-image-loader",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -10,10 +10,22 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "publish:npm": "rm -rf dist && mkdir dist && babel ./src/components -d dist --copy-files"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "keywords": [
     "image",
@@ -33,5 +45,9 @@
     ]
   },
   "author": "Qinjun Sui",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/preset-react": "^7.16.7"
+  }
 }

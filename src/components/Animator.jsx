@@ -1,11 +1,12 @@
+import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Animator(props) {
   const [idx, setIdx] = useState(0);
   const direction = useRef(-1);
   const images = props.images
-  const interval = props.interval ?? 50
-  const turn = props.turn ?? true
+  const interval = props.interval ? props.interval : 50
+  const turn = props.turn === false ? false : true
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -1,1 +1,1 @@
-export * from './components/Animator'
+export * from './components'
